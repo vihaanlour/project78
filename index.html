@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <title>Family Book</title>
+
+  <body>
+    <h1>Family Book</h1>
+    <img id="family_img" src="https://images.penguinrandomhouse.com/cover/9781984815064" />
+    <h3 id="one">1. Our Family Book</h3>
+    <button type="button" onclick="family()">Next</button>
+    <script>
+      var names = ["2. My Father (Rachit lour)", "3. My Mother (Vijeta lour)", "4. Me (Vihaan lour)", "1. Our Family Book"];
+      var images = ["https://ak.picdn.net/shutterstock/videos/1008269806/thumb/1.jpg", "https://image.freepik.com/free-vector/cartoon-young-woman_24908-32968.jpg", "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/5ecb579e-ba3f-402f-a0bc-93798adaab42/d70ga4a-526a9031-aa83-4e6a-b606-7e8d42bd28fe.png/v1/fill/w_546,h_488,strp/black_kid_animated_by_goldgat_d70ga4a-fullview.png", "https://images.penguinrandomhouse.com/cover/9781984815064"];
+      var i = 0;
+
+      function family() {
+        document.getElementById("one").innerHTML = names[i];
+        document.getElementById("family_img").src = images[i];
+        i++;
+        if (i == 4) {
+          i = 0;
+        }
+      }
+    </script>
+  </body>
+</html>
